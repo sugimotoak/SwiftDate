@@ -183,7 +183,14 @@ extension DateInRegion {
 	
 	/// Short month name of the date
 	/// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+	@available(*, deprecated: 4.1.8, message: "Use monthShortName instead")
 	public var shortMonthName: String {
+		return self.monthShortName
+	}
+	
+	/// Short month name of the date
+	/// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+	public var monthShortName: String {
 		return self.formatters.dateFormatter().shortMonthSymbols[self.month-1]
 	}
 	

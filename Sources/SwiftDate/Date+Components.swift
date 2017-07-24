@@ -147,8 +147,14 @@ public extension Date {
 	}
 	
 	/// Short month name of the date expressed in the context of `defaultRegion`.
+	@available(*, deprecated: 4.1.8, message: "Use monthShortName instead")
 	public var shortMonthName: String {
-		return self.inDateDefaultRegion().shortMonthName
+		return self.inDateDefaultRegion().monthShortName
+	}
+	
+	/// Short month name of the date expressed in the context of `defaultRegion`.
+	public var monthShortName: String {
+		return self.inDateDefaultRegion().monthShortName
 	}
 	
 	/// Boolean value that indicates whether the month is a leap month.
