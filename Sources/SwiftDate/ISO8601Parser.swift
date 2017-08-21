@@ -81,6 +81,8 @@ public struct ISO8601Configuration {
 	/// Calendar used to generate the date. By default is the current system calendar
 	var calendar:			Calendar = Calendar.current
 	
+    public init() { }
+    
 	init(strict: Bool = false, calendar: Calendar? = nil) {
 		self.strict = strict
 		self.calendar = calendar ?? Calendar.current
